@@ -11,23 +11,23 @@ func main() {
 }
 func partition(mas []int, low, high int) int {
 	p := mas[high]
-	fmt.Printf("p=%d\n",p)
+	//fmt.Printf("p=%d\n",p)
 	for j := low; j < high; j++ {
-	    fmt.Printf("j=%d, mas[j]=%d\n",j,mas[j])
+	    //fmt.Printf("j=%d, mas[j]=%d\n",j,mas[j])
 		if mas[j] < p {
-		    fmt.Println("")
-		    fmt.Printf("Before: mas[%d]=%d, mas[%d]=%d\n",j,mas[j],low,mas[low])
+// 		    fmt.Println("")
+// 		    fmt.Printf("Before: mas[%d]=%d, mas[%d]=%d\n",j,mas[j],low,mas[low])
 			mas[j], mas[low] = mas[low], mas[j]
-			fmt.Printf("After: mas[%d]=%d, mas[%d]=%d\n",j,mas[j],low,mas[low])
-			fmt.Println(mas)
+// 			fmt.Printf("After: mas[%d]=%d, mas[%d]=%d\n",j,mas[j],low,mas[low])
+// 			fmt.Println(mas)
 			low++
-			fmt.Printf("low=%d\n",low)
+// 			fmt.Printf("low=%d\n",low)
 		}
 	}
-    fmt.Printf("Finish before: mas[%d]=%d, mas[%d]=%d\n",j,mas[j],low,mas[low])
+//     fmt.Printf("Finish before: mas[%d]=%d, mas[%d]=%d\n",high,mas[high],low,mas[low])
 	mas[low], mas[high] = mas[high], mas[low]
-	fmt.Printf("Finish after: mas[%d]=%d, mas[%d]=%d\n",j,mas[j],low,mas[low])
-	fmt.Println(mas)
+// 	fmt.Printf("Finish after: mas[%d]=%d, mas[%d]=%d\n",high,mas[high],low,mas[low])
+// 	fmt.Println(mas)
 	return low
 }
 
