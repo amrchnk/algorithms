@@ -1,13 +1,8 @@
-package main
+package insertionSort
 
 import (
-    "fmt"
+//     "fmt"
 )
-
-func main(){
-    mas:=[]int{2,4,3,6,34,12,64,23,22}
-    fmt.Println(insertionSort(mas))
-}
 
 func insertionSort(mas []int)[]int{
     for i:=1;i<len(mas);i++{
